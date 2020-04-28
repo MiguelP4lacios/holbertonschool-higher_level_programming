@@ -8,7 +8,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *current = list;
 
-	while (current != NULL)
+	while (current && list && current->next)
 	{
 		current = current->next;
 		if (current == list)
