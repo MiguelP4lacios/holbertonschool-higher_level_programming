@@ -3,4 +3,4 @@ for i in range(97, 123):
     if i == 113 or i == 101:
         pass
     else:
-         print("{}".format(chr(i)), end="")
+        print("{}".format(chr(i)), end="")
