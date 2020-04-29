@@ -1,0 +1,6 @@
+def remove_char_at(str, n):
+    if n >= 0:
+        new_str = str[:n] + str[1 + n:]
+        return new_str
+    else:
+        return str
