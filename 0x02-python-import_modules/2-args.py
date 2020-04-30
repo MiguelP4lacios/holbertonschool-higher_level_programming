@@ -9,4 +9,4 @@ if __name__ == "__main__":
         man = "arguments:"
     print("{} {}".format(len(argv) - 1, man))
     for i in range(1, len(argv)):
-        print("{} : {}".format(i, argv[i]))
+        print("{}: {}".format(i, argv[i]))
