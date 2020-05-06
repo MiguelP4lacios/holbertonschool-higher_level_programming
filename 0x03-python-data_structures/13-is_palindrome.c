@@ -8,7 +8,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t * corrent;
-	size_t size, j;
+	size_t size, j, flag = 1;
 	int *palindro_array;
 
 	if (*head == NULL)
@@ -28,7 +28,10 @@ int is_palindrome(listint_t **head)
 	for (j = 0; j < size; j++, size--)
 	{
 		if (palindro_array[j] != palindro_array[size - 1])
-			return (0);
+			flag = 0;
 	}
+	free (palindro_array);
+	if (flag == 0)
+		return(0);
 	return (1);
 }
