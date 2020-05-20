@@ -55,14 +55,7 @@ class Square:
         """
         This property is to configure it
         """
-        if type(value) != int:
-            print("size must be an integer", end="")
-            raise TypeError
-        elif value < 0:
-            print("size must be >= 0", end="")
-            raise ValueError
-        else:
-            self.__size = value
+        self.__size = value
 
     def my_print(self):
         """
