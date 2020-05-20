@@ -19,9 +19,9 @@ class Square:
     """
     def __init__(self, size):
         """
-        The constructor for Square class. 
-        
+        The constructor for Square class.
+
         Parameters:
-            size (int): The size of square. 
+            size (int): The size of square.
         """
         self.__size = size

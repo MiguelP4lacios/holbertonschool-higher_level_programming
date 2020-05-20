@@ -20,10 +20,10 @@ class Square:
     """
     def __init__(self, size=0):
         """
-        The constructor for Square class. 
-        
+        The constructor for Square class.
+
         Parameters:
-            size (int): The size of square. 
+            size (int): The size of square.
         """
         if type(size) != int:
             print("size must be an integer", end="")
@@ -33,11 +33,12 @@ class Square:
             raise ValueError
         else:
             self.__size = size
+
     def area(self):
         """
         This function calculates the area of a square
 
-         Returns: 
-            Square: The area of a square. 
+         Returns:
+            Square: The area of a square.
         """
         return self.__size ** 2
