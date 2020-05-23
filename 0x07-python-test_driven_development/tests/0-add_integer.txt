@@ -1,0 +1,114 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+This is an test text file in reStructuredText format.  First import
+``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(28, 1)
+    29
+
+    >>> add_integer(-5, 0)
+    -5
+
+    >>> add_integer(8, -2)
+    6
+
+    >>> add_integer(-1000, -100)
+    -1100
+
+    >>> add_integer(1.0, 2.0)
+    3
+
+    >>> add_integer(.999999999999999, .999999999999999999)
+    1
+
+    >>> add_integer(.9, .9)
+    0
+
+    >>> add_integer(.4, .4)
+    0
+
+    >>> add_integer(b=0, a=3)
+    3
+
+    >>> add_integer(1, b=3)
+    4
+
+    >>> add_integer(b=3, 1)
+    Traceback (most recent call last):
+    SyntaxError: positional argument follows keyword argument
+
+    >>> add_integer(None,8)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(8, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer(...)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(b=7)
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer('a', 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(2, 'a')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer("miguel", "palacios")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(35, "palacios")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer(float('nan'), 2)
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(float("casa"), a=3)
+    Traceback (most recent call last):
+    ValueError: could not convert string to float: 'casa'
+
+    >>> add_integer(-4, float("casa"),)
+    Traceback (most recent call last):
+    ValueError: could not convert string to float: 'casa'
+
+    >>> add_integer(-4, ...,float("casa"))
+    Traceback (most recent call last):
+    ValueError: could not convert string to float: 'casa'
+
+    >>> add_integer(2, int('a'))
+    Traceback (most recent call last):
+    ValueError: invalid literal for int() with base 10: 'a'
+
+    >>> add_integer(2, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(n ,8)
+    Traceback (most recent call last):
+    NameError: name 'n' is not defined
+
+    >>> add_integer(a, 8)
+    Traceback (most recent call last):
+    NameError: name 'a' is not defined
