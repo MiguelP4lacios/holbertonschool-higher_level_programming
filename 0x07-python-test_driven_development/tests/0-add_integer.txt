@@ -41,6 +41,10 @@ Now use it:
     >>> add_integer(1, b=3)
     4
 
+    >>> add_integer(b=3, 1)
+    Traceback (most recent call last):
+    SyntaxError: non-keyword arg after keyword arg
+
     >>> add_integer(None,8)
     Traceback (most recent call last):
     TypeError: a must be an integer
