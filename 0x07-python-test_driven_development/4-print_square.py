@@ -1,7 +1,20 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-def print_square(size):
+"""print_square
+"""
 
+
+def print_square(size):
+    """print_square
+
+    Arguments:
+        size {[type]} -- [description]
+
+    Raises:
+        TypeError: [description]
+        ValueError: [description]
+        TypeError: [description]
+    """
     e_1 = "size must be an integer"
     e_2 = "size must be >= 0"
 

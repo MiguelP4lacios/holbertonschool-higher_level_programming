@@ -1,19 +1,22 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-"""[summary]
+"""Mudule
 """
+
+
 def matrix_divided(matrix, div):
-    """[summary]
+    """matrix_divided
 
     Arguments:
         matrix {[type]} -- [description]
         div {[type]} -- [description]
     """
+
     e1 = "matrix must be a matrix (list of lists) of integers/floats"
     e2 = "Each row of the matrix must have the same size"
     e3 = "div must be a number"
     e4 = "division by zero"
-    
+
     if type(matrix) != list:
         raise TypeError(e1)
     for row in matrix:

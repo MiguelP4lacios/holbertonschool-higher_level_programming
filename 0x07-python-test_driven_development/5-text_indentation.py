@@ -1,7 +1,18 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+"""text_indentation
+"""
+
+
 def text_indentation(text):
-    
+    """text_indentation
+
+    Arguments:
+        text {[type]} -- [description]
+
+    Raises:
+        TypeError: [description]
+    """
     if type(text) is not str:
         raise TypeError("text must be a string")
 
