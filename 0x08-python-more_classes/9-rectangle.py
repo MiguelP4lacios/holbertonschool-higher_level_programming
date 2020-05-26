@@ -7,8 +7,6 @@
 class Rectangle:
     """class Rectangle that defines a rectangle
     """
-    __erro_1 = "width must be an integer"
-    __erro_2 = "height must be >= 0"
     number_of_instances = 0
     print_symbol = "#"
 
@@ -16,36 +14,19 @@ class Rectangle:
         """construtor
         """
         if type(width) != int:
-            raise TypeError(Rectangle.__erro_1)
+            raise TypeError("width must be an integer")
         elif width < 0:
-            raise ValueError(Rectangle.__erro_2)
+            raise ValueError("width must be >= 0")
         else:
             self.__width = width
 
         if type(height) != int:
-            raise TypeError(Rectangle.__erro_1)
+            raise TypeError("height must be an integer")
         elif width < 0:
-            raise ValueError(Rectangle.__erro_2)
+            raise ValueError("height must be >= 0")
         else:
             self.__height = height
         Rectangle.number_of_instances += 1
-
-    @property
-    def height(self):
-        """getter
-        """
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """setter
-        """
-        if type(value) != int:
-            raise TypeError(Rectangle.__erro_1)
-        elif value < 0:
-            raise ValueError(Rectangle.__erro_2)
-        else:
-            self.__height = value
 
     @property
     def width(self):
@@ -58,11 +39,28 @@ class Rectangle:
         """setter
         """
         if type(value) != int:
-            raise TypeError(Rectangle.__erro_1)
+            raise TypeError("width must be an integer")
         elif value < 0:
-            raise ValueError(Rectangle.__erro_2)
+            raise ValueError("width must be >= 0")
         else:
             self.__width = value
+
+    @property
+    def height(self):
+        """getter
+        """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """setter
+        """
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
 
     def area(self):
         """This function renturn the area
