@@ -119,4 +119,4 @@ class Rectangle:
     def square(cls, size=0):
         """Class method that returns a square
         """
-        return Rectangle(width=size,height=size)
+        return Rectangle(width=size, height=size)
