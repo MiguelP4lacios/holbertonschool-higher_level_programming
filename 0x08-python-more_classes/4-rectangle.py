@@ -7,23 +7,21 @@
 class Rectangle:
     """class Rectangle that defines a rectangle
     """
-    __erro_1 = "width must be an integer"
-    __erro_2 = "height must be >= 0"
 
     def __init__(self, width=0, height=0):
         """construtor
         """
         if type(width) != int:
-            raise TypeError(Rectangle.__erro_1)
+            raise TypeError("width must be an integer")
         elif width < 0:
-            raise ValueError(Rectangle.__erro_2)
+            raise ValueError("width must be >= 0")
         else:
             self.__width = width
 
         if type(height) != int:
-            raise TypeError(Rectangle.__erro_1)
+            raise TypeError("height must be an integer")
         elif width < 0:
-            raise ValueError(Rectangle.__erro_2)
+            raise ValueError("height must be >= 0")
         else:
             self.__height = height
 
@@ -38,9 +36,9 @@ class Rectangle:
         """setter
         """
         if type(value) != int:
-            raise TypeError(Rectangle.__erro_1)
+            raise TypeError("height must be an integer")
         elif value < 0:
-            raise ValueError(Rectangle.__erro_2)
+            raise ValueError("height must be >= 0")
         else:
             self.__height = value
 
@@ -55,9 +53,9 @@ class Rectangle:
         """setter
         """
         if type(value) != int:
-            raise TypeError(Rectangle.__erro_1)
+            raise TypeError("width must be an integer")
         elif value < 0:
-            raise ValueError(Rectangle.__erro_2)
+            raise ValueError("height must be >= 0")
         else:
             self.__width = value
 
@@ -89,5 +87,4 @@ class Rectangle:
         """Return a string representation of the rectangle
             to be able to recreate
         """
-        return '{self.__class__.__name__}\
-            ({self.width}, {self.height})'.format(self=self)
+        return 'Rectangle({self.width}, {self.height})'.format(self=self)
