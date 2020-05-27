@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """This module countain locked class
 """
+
+
 class LockedClass:
     """Class
     """
