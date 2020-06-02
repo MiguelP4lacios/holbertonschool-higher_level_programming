@@ -85,4 +85,18 @@ Now use it:
         >>> my_list.append('b')
         >>> my_list.print_sorted()
         ['a', 'b', 'c']
-        
+
+        >>> MyList.print_sorted([1, 2, 4, 3])
+        [1, 2, 3, 4]
+
+        >>> MyList.print_sorted([])
+        []
+
+        >>> my_list = []
+        >>> my_list.print_sorted()
+        Traceback (most recent call last):
+        AttributeError: 'list' object has no attribute 'print_sorted'
+
+        >>> my_list = MyList()
+        >>> my_list.print_sorted()
+        []
