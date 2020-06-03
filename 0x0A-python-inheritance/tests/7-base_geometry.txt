@@ -12,14 +12,26 @@ This is an test text file in reStructuredText format.  First import
 
 Now use it:
 
-        >>> bg.integer_validator("name", "John")
-        Traceback (most recent call last):
-        TypeError: name must be an integer
+        >>> try:
+        ...      bg.integer_validator("name", "John")
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] name must be an integer
 
-        >>> bg.integer_validator("betty", 3)
+        >>> try:
+        ...      bg.integer_validator("name", 6)
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        
+        >>> try:
+        ...      bg.integer_validator("betty", -3)
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        [ValueError] betty must be greater than 0
 
-        >>> bg.integer_validator("car", -3)
-        Traceback (most recent call last):
-        ValueError: car must be greater than 0
+        >>> try:
+        ...      bg.integer_validator("betty", 0)
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        [ValueError] betty must be greater than 0
 
-        >>> bg.integer_validator("mango", 6)
