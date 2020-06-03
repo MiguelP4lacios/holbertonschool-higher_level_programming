@@ -19,7 +19,7 @@ def read_lines(filename="", nb_lines=0):
                 i = 0
 
                 if (nb_lines <= 0 or nb_lines >= total_lines):
-                        print(afile.read())
+                        print(afile.read(), end="")
                 else:
                         line = ""
                         while (i < nb_lines):
