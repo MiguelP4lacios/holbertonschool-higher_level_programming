@@ -52,3 +52,45 @@ Now use it:
         ... except Exception as e:
         ...     print("[{}] {}".format(e.__class__.__name__, e))
         [Exception] area() is not implemented
+
+        >>> try:
+        ...     bg.integer_validator("car", [])
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", [1, 4])
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", ())
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", (1, ))
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", {})
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", {2, 4})
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", None)
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
