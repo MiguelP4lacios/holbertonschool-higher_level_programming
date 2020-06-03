@@ -1,0 +1,25 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+This is an test text file in reStructuredText format.  First import
+``BaseGeometry`` from the ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+
+Now use it:
+
+        >>> bg.integer_validator("name", "John")
+        Traceback (most recent call last):
+        TypeError: name must be an integer
+
+        >>> bg.integer_validator("betty", 3)
+
+        >>> bg.integer_validator("car", -3)
+        Traceback (most recent call last):
+        ValueError: car must be greater than 0
+
+        >>> bg.integer_validator("mango", 6)
