@@ -94,3 +94,9 @@ Now use it:
         ... except Exception as e:
         ...     print("[{}] {}".format(e.__class__.__name__, e))
         [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", True)
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
