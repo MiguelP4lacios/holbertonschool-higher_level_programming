@@ -8,6 +8,8 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
+    if n == 1:
+        return [[1]]
     triangle = [
             [1],
             [1, 1]]
