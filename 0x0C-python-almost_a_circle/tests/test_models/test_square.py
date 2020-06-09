@@ -96,9 +96,9 @@ class TestSquareValidation(unittest.TestCase):
                 self.squ.size = 12
                 self.assertEqual(self.squ.size, 12)
                 with self.assertRaises(ValueError):
-                        self.squ.width = 0
+                        self.squ.size = 0
                 with self.assertRaises(TypeError):
-                        self.squ.width = "DILL"
+                        self.squ.size = "DILL"
 
         def test_set_get_x(self):
 
