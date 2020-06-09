@@ -1,27 +1,34 @@
 #!/usr/bin/python3
+"""Module rectangle
+"""
 
 
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+        """Class Square"""
 
         def __init__(self, size, x=0, y=0, id=None):
+                """construtor
+                """
 
                 super().__init__(size, size, x, y, id)
                 self.__size = size
 
         def __str__(self):
-
+                """overloand str"""
                 return ("[Square] ({}) {}/{} - {}".format(
                         self.id, self.x, self.y, self.__size))
 
         @property
         def size(self):
+                """"getter size"""
                 return self.__size
 
         @size.setter
         def size(self, value):
+                """setter size"""
                 if type(value) is not int:
                         raise TypeError("width must be an integer")
                 elif value <= 0:
@@ -30,6 +37,7 @@ class Square(Rectangle):
                         self.__size = value
 
         def update(self, *parameter, **kwargs):
+                """Method update"""
                 if len(parameter) > 0:
                         self.id = parameter[0]
                 if len(parameter) > 1:
@@ -50,7 +58,7 @@ class Square(Rectangle):
                                         self.id = value
 
         def to_dictionary(self):
-
+                """Method to dictionary"""
                 return {'id': self.id,
                         'size': self.__size,
                         'x': self.x,
