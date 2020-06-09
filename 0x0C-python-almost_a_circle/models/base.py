@@ -49,7 +49,10 @@ class Base:
         @classmethod
         def create(cls, **dictionary):
                 """Classmethod create"""
-                dummy = cls(9, 5, 8)
+                if cls.__name__ == "Rectangle":
+                        dummy = cls(9, 5)
+                if cls.__name__ == "Square":
+                        dummy = cls(9)
                 dummy.update(**dictionary)
                 return dummy
 
