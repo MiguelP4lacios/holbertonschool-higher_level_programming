@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+from models.rectangle import Rectangle
 from models.square import Square
 import unittest
 
@@ -25,6 +26,10 @@ class TestSquareId(unittest.TestCase):
 
                 obj = Square(7, 0, 0, 90)
                 self.assertEqual(obj.id, 90)
+
+        def test_subclass(self):
+
+                self.assertTrue(issubclass(Square, Rectangle))
 
 
 class TestSquareValidation(unittest.TestCase):
