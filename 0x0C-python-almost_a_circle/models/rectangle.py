@@ -1,9 +1,13 @@
 #!/usr/bin/python3
+"""Module rectangle
+"""
+
 
 from models.base import Base
 
 
 class Rectangle(Base):
+        """Class rectangle"""
 
         def __init__(self, width, height, x=0, y=0, id=None):
 
