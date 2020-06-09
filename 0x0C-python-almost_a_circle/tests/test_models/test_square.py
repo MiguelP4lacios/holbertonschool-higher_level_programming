@@ -10,12 +10,12 @@ class TestSquareId(unittest.TestCase):
         def test_Square_id_1(self):
 
                 obj1 = Square(5)
-                self.assertEqual(obj1.id, 15)
+                self.assertEqual(obj1.id, 16)
 
         def test_Square_id_2(self):
 
                 obj2 = Square(2)
-                self.assertEqual(obj2.id, 16)
+                self.assertEqual(obj2.id, 17)
 
         def test_Square_id_negative(self):
 

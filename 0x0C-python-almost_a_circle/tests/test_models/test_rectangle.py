@@ -201,5 +201,11 @@ class TestRectangleMethods(unittest.TestCase):
 
                 self.assertEqual(type(self.rec2.to_dictionary()), dict)
 
+        def test_create(self):
+
+                r1_dictionary = self.rec2.to_dictionary()
+                r2 = Rectangle.create(**r1_dictionary)
+                self.assertIsInstance(r2, Rectangle)
+
 if __name__ == '__main__':
         unittest.main()
