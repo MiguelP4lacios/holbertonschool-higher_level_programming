@@ -21,6 +21,7 @@ class Base:
 
         @staticmethod
         def to_json_string(list_dictionaries):
+                """to json string"""
 
                 if list_dictionaries is None:
                         return []
@@ -28,7 +29,7 @@ class Base:
 
         @classmethod
         def save_to_file(cls, list_objs):
-
+                """save to file"""
                 list_dictionaries = []
                 if list_objs is not None:
                         for obj in list_objs:
@@ -39,7 +40,7 @@ class Base:
 
         @staticmethod
         def from_json_string(json_string):
-
+                """from json str"""
                 if json_string is None:
                         return []
                 list_objs = json.loads(json_string)
@@ -47,14 +48,14 @@ class Base:
 
         @classmethod
         def create(cls, **dictionary):
-
+                """Classmethod create"""
                 dummy = cls(9, 5, 8)
                 dummy.update(**dictionary)
                 return dummy
 
         @classmethod
         def load_from_file(cls):
-
+                """load from file"""
                 list_instances = []
                 ext = ".json"
                 try:
