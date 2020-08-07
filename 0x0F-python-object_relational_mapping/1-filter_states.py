@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     query = db.cursor()
 
-    query.execute('SELECT * FROM states WHERE (name regexp "^N.") ORDER BY id ASC')
+    query.execute('SELECT * FROM states WHERE name regexp "^N." ORDER BY id ASC;')
     for row in query.fetchall():
         print(row)
     query.close()
