@@ -10,12 +10,17 @@ if __name__ == "__main__":
     password = argv[2]
     database = argv[3]
 
-    db = MySQLdb.connect(host="localhost", port=3306,
-                         user=username, passwd=password, db=database, charset="utf8")
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=username,
+                         passwd=password,
+                         db=database,
+                         charset="utf8")
 
     query = db.cursor()
 
-    query.execute('SELECT * FROM states WHERE name regexp "^N." ORDER BY id ASC;')
+    query.execute(
+        'SELECT * FROM states WHERE name regexp "^N." ORDER BY id ASC;')
     for row in query.fetchall():
         print(row)
     query.close()
