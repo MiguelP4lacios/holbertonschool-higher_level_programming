@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module 2_my_filter_states
+"""Module 3_my_safe_filter_states
 """
 import MySQLdb
 from sys import argv
@@ -11,12 +11,21 @@ if __name__ == "__main__":
     database = argv[3]
     searched = argv[4]
 
-    db = MySQLdb.connect(host="localhost", port=3306,
-                         user=username, passwd=password, db=database, charset="utf8")
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=username,
+                         passwd=password,
+                         db=database,
+                         charset="utf8")
 
     query = db.cursor()
 
-    query.execute("SELECT * FROM states WHERE name = %(searched)s ORDER BY id ASC", {'searched':searched})
+    query.execute(
+        "SELECT * FROM states\
+        WHERE name = %(searched)s\
+        ORDER BY id ASC",
+        {'searched': searched})
+
     for row in query.fetchall():
         print(row)
     query.close()
