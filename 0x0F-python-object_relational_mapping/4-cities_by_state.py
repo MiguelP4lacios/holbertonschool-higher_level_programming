@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module 4_cities_by_states
 """
 import MySQLdb
