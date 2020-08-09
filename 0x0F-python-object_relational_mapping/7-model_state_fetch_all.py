@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module 7_model_state_fetch_all
 """
 from sys import argv
@@ -12,7 +12,8 @@ if __name__ == "__main__":
     passwd = argv[2]
     db = argv[3]
 
-    database_url = 'mysql+mysqldb://{}:{}@localhost:3360/{}'.format(user,passwd, db)
+    database_url = 'mysql+mysqldb://{}:{}@localhost:3360/{}'.format(
+        user, passwd, db)
 
     engine = create_engine(database_url, pool_pre_ping=True)
     Base.metadata.create_all(engine)
