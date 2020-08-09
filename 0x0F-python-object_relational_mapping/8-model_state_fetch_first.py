@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module 7_model_state_fetch_all
 """
 from sys import argv
