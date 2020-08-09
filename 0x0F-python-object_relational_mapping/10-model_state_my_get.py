@@ -23,7 +23,6 @@ if __name__ == "__main__":
     query = init_basedata.query(State).filter(
         State.name.like(name_state)).all()
 
-
     if query:
         print("{}".format(query[0].id))
     else:
