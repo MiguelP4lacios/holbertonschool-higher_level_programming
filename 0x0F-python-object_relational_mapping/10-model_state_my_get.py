@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module 10_model_state_my_get
 """
 from sys import argv
