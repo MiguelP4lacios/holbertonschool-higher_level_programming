@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module 7_model_state_fetch_all
+"""Module 8_model_state_fetch_first
 """
 from sys import argv
 from model_state import Base, State
