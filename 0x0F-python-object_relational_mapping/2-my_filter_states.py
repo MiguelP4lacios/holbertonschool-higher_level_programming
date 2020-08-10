@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Module 2_my_filter_states
 """
 import MySQLdb
@@ -22,10 +22,11 @@ if __name__ == "__main__":
 
     query.execute(
         "SELECT * FROM states\
-        WHERE name = '{}'\
+        WHERE name LIKE BINARY '{}'\
         ORDER BY id ASC".format(searched))
 
     for row in query.fetchall():
         print(row)
+
     query.close()
     db.close()
