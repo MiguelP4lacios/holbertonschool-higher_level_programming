@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-"""Module 12_model_state_updata
+#!/usr/bin/env python3
+"""Module 9_model_state_fetch_a
 """
 from sys import argv
 from model_state import Base, State
@@ -20,8 +20,12 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session_basedata = sessionmaker(bind=engine)
     init_basedata = session_basedata()
-    query = init_basedata.query(State).filter(
-        State.id == 2).update({State.name: "New Mexico"})
+    query = init_basedata.query(State)
+
+    for state in query.order_by(State.id).all():
+        if search("(a)", state.name):
+            init_basedata.delete(state)
+
     init_basedata.commit()
 
     init_basedata.close()
