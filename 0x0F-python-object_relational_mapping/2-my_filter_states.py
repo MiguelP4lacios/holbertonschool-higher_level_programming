@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module 2_my_filter_states
 """
 import MySQLdb
