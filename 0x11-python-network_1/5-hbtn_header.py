@@ -2,11 +2,14 @@
 """hbtn header
 """
 
-from sys import argv
-import requests
 
-URL = argv[1]
+if if __name__ == "__main__":
 
-res_html = requests.get(URL)
+    from sys import argv
+    import requests
 
-print(res_html.headers.get('x-request-id'))
+    URL = argv[1]
+
+    res_html = requests.get(URL)
+
+    print(res_html.headers.get('x-request-id'))
