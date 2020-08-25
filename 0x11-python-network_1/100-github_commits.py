@@ -10,10 +10,11 @@ if __name__ == "__main__":
 
     URL = 'https://api.github.com/repos/{}/{}/commits'.format(argv[1], argv[2])
 
-    res_json = requests.get(URL).json()
+    res = requests.get(URL)
 
-    for c in res_json[:10]:
+    commits = res.json()
+
+    for c in commits[:10]:
         sha = c.get('sha')
         author = c.get('commit').get('author').get('name')
-
         print("{}: {}".format(sha, author))
