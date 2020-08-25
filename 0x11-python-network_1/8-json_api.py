@@ -7,7 +7,7 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-    url = 'http://7ffe2036a3c6.9790342a.hbtn-cod.io:5000/search_user'
+    url = 'http://0.0.0.0:5000/search_user'
 
     q = ""
     if len(argv) == 2:
