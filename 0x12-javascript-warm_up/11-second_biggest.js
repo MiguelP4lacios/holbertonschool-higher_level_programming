@@ -12,6 +12,6 @@ if (arg.length < 4) {
     }
   });
 
-  listInt.sort();
+  listInt.sort((a, b) => a - b);
   console.log(listInt[listInt.length - 2]);
 }
