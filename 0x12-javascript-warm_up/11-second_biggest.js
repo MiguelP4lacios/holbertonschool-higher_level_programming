@@ -2,7 +2,7 @@
 
 const arg = process.argv;
 
-if (!arg[2] || arg[2] === '1') {
+if (arg.length < 4) {
   console.log(0);
 } else {
   const listInt = [];
