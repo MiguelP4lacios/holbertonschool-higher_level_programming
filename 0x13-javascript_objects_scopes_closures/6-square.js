@@ -8,12 +8,12 @@ class Square extends SquareOld {
   }
 
   charPrint (c) {
-    if (c) {
-      for (let i = 0; i < this.size; i++) {
-        console.log(c.repeat(this.size));
+    for (let i = 0; i < this.height; i++) {
+      if (c) {
+        console.log(c.repeat(this.width));
+      } else {
+        console.log('X'.repeat(this.width));
       }
-    } else {
-      this.print();
     }
   }
 }
