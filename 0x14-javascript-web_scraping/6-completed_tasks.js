@@ -14,7 +14,7 @@ request(URL, (error, response, body) => {
         if (infoTasks[element.userId] === undefined) {
           infoTasks[element.userId] = 1;
         } else {
-          infoTasks[element.userId]++; 
+          infoTasks[element.userId]++;
         }
       }
     });
