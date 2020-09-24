@@ -1,4 +1,6 @@
 #!/usr/bin/node
 $(document).ready(() => {
-  $('header').addClass('red');
+  $('DIV#red_header').click(() => {
+    $('header').addClass('red');
+  });
 });
